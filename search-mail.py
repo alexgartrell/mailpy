@@ -69,7 +69,7 @@ def main(argv):
         if args.delete_messages:
             imap.uid('STORE', uid, '+FLAGS', '(\\Deleted)')
 
-    if args.delete_messages and len(uids) > 0:
+    if args.delete_messages and uids:
         imap.expunge()
             
 
